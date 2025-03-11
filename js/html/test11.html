@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 아이디를 이용한 접근 */
+        /*
+        #pic{
+            width: 100px;            
+        }
+        */
+        /* .photo{border:5px solid red} */
+
+        img[class*='photo']{
+            width: 550px;
+        }
+        /* img{border:25px solid green} */
+        img[name='pic']{width: 200px;}
+        /*img 자체가 아니라, img의 상태에 대해서도 선택대상이 될 수 있다..
+            :hover  가상클래스
+        */
+
+        /* img:hover{
+            border:2px solid red;
+        } */
+
+        img:nth-child(1){border:10px solid blue}
+    </style>
+</head>
+<body>
+    <!-- 대체 태그와 빈태그는 가상 요소 선택자의 before, after 사용 불가 -->
+    <img src="data:image/webp;base64,UklGRjQDAABXRUJQVlA4ICgDAADQFgCdASq5AHcAPoEioFAlISUlFQCgEAljbt1e8bQk6PruRlAg9Nt5ueg02bedgKW7u7ut6M6uHH/Ce7u73zN/skc3QIpMXrhRYwZboN+enH5lOXUyJIehDsZ191JPcEskGgvzgbLPhWyduVmKIp3SmCD0m1wIAYtdY8SHcIe7CFPVmU/2OHSrH5gJga3bBOsGKG5I8I6RI3NtvorYEgzfizyprohTCFUKRf8dGsoPOhuZ6Ue60NlGnu/kPp/EoAD+8ol/43jEhXC73PSZPxDBxeN1JXit3BlXcgbcDnfoeHlZPTpJG+5qc2qx7NSRZ45zkvMpf2wkno+XRA33j7zmLoisp9LamTEqhZ63E9zgA/6gsTFeYnPQaWMtYFpz8vTuZusqIAGuQRbATgr/WkgrFnw0BiH4sU5SUepcLOBq/ZI0UV7MEL7kKACIhV8+ZPUF5K6EzfZoKhgUVvKaDqZ/XEOZFi3bsRIiWWRAPMLpwlk2mE0qYN6kS275jOC/sDLjXQRovKqgGGIbknUFOfH+rRxKZ/NJIHUzgDxlCAxH09/m55RDgYg8yzyWEO8jB+ybTSVbwGfdoUWN6EYrt3a2GcWxUFC//G5/DYkPQVqAR0OSXHvDYDbkkFDTjJvsukAGq85BC6I40kR2AqzOtBwZwSZzNgSORK9pzKGNgXz7hBtqEeR8cwLgaPAMOR9Kk+smtG0fz1rgb9irjNrrd191ozcf+5lBwLQmVk1HhI/jF1Heyu1iWbO5oO26Yu5RvEF16ETVc3D29Ye6eMVpcSOOSlh8RdVQKlIdSN974bAgWdjSTgajF3KCpoEFDxCzoU3tGUuDQcDCJ4q65Vcn+fqE3qtOwfrbV2C+vD63zD/M035pyJVzzpWPCc7si9j/diqvfUIJ/1SqM/zNI2QeKLz0yHNIPcd9KUyF8QvSVbzpXNHYnOFx/FZmIizVyg2UHE28InponQ7/n3i2etgpmuoI5qI74HJgMBPRY+P+ElXIzAZCzADYbDKN54rhUTk9kIAvcGor8KD4D8OHn6wVqJz7hzv27zpp508SiKB1GKj7WhulBMAAAAAA" id="pic" name="pic" class="photo">
+
+</body>
+</html>

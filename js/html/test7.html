@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*개발자가 원하는 스타일을 정의한 후 이름을 붙여넣은 단위
+        즉 대상을 지정하지 않는다*/
+        
+        .pstyle{
+            color:green;  
+            font-weight:bold;              
+        }        
+        
+        /* 태그 선택자로 접근하기
+        p{
+            color:red;
+        }
+        */
+        /*이름 선택자로 접근하기
+        p[name="box"]{
+            color:blue;
+        }
+        */
+        /*아이디로 접근하기
+        #rect{
+            border:3px solid #000000;
+        }
+        */
+        
+        /*클래스로 접근하기*/
+        p[class*="pstyle"]{
+            border:3px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore non, voluptatum dolorem ad consectetur magnam explicabo atque ipsum expedita earum perspiciatis pariatur! Labore minima, ab provident facere harum consequuntur in!
+        Recusandae maxime iste omnis voluptas ullam veritatis placeat molestiae assumenda aut, accusantium error ratione a eveniet laborum autem aperiam repellendus possimus nulla reiciendis. Nostrum quibusdam repellendus laboriosam id autem repudiandae.
+    </p>
+
+    <p name="box" id="rect" class="pstyle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore non, voluptatum dolorem ad consectetur magnam explicabo atque ipsum expedita earum perspiciatis pariatur! Labore minima, ab provident facere harum consequuntur in!
+        Recusandae maxime iste omnis voluptas ullam veritatis placeat molestiae assumenda aut, accusantium error ratione a eveniet laborum autem aperiam repellendus possimus nulla reiciendis. Nostrum quibusdam repellendus laboriosam id autem repudiandae.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore non, voluptatum dolorem ad consectetur magnam explicabo atque ipsum expedita earum perspiciatis pariatur! Labore minima, ab provident facere harum consequuntur in!
+        Recusandae maxime iste omnis voluptas ullam veritatis placeat molestiae assumenda aut, accusantium error ratione a eveniet laborum autem aperiam repellendus possimus nulla reiciendis. Nostrum quibusdam repellendus laboriosam id autem repudiandae.
+    </p>
+
+</body>
+</html>
