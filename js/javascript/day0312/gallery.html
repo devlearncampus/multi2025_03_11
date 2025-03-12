@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onClick="next()">다음 동작</button>
+    <br>
+    <img src="../images/hero/image1.png" alt="">
+
+    <script>
+        let n=1;
+        /*문서내의 이미지를 동적으로 변경해보자*/ 
+
+        //함수란? 내가 원할때 코드를 동작시키기 위해, 코드블럭을 만들어 이름을 붙여 놓은 단위
+        function next(){
+            //기존 n의 값을 1 증가시켜보자 
+            n=n+1;
+            console.log(n+"번 수행 ");
+            document.querySelector("img").src="../images/hero/image"+n+".png";
+        }
+    </script>
+</body>
+</html>
