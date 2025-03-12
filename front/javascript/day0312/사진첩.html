@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //브라우저가 실행되는 동안 계속 누적이 되어야 하므로, 전역변수로 선언
+        let n=0;
+
+        //이전 사진 나오도록 처리하는 함수 정의 
+        function prev(){
+            //console.log("이전 사진 처리 예정");
+            //문서내의 img 요소를 태그 선택자로 접근하여 얻어옴 
+            let img=document.querySelector("img");
+            img.src="../images/shrek/img"+ n + ".jpg";
+            console.log("n값은 ", n);
+        }
+
+        //다음 사진 나오도록 처리하는 함수 정의 
+        function next(){
+            //console.log("다음 사진  출력");            
+            n++;
+            //문서내의 img 요소를 태그 선택자로 접근하여 얻어옴
+            let img=document.querySelector("img");
+            img.src="../images/shrek/img" + n + ".jpg";
+            console.log("n값은 ", n);
+            //console.log("줄넘기"+ n +"회"); 
+        }        
+    </script>
+</head>
+<body>
+    <p>
+        <button>이전</button>
+        <button onClick="next()">다음</button>
+    </p>
+    
+    <img src="../images/shrek/img0.jpg" alt="">
+
+</body>
+</html>

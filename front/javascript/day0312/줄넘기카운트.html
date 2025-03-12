@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            background:red;   
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:10px;
+            padding-bottom:10px;
+            text-decoration: none; /*링크 밑줄 제거*/ 
+        }
+    </style>
+    <script>
+        let n=0; // 전역변수- 브라우저가 종료될때까지 생명력을 유지함
+
+        function jump(){
+            //let n=1;
+            n++; 
+            console.log("줄넘기"+ n +"회"); 
+        }
+    </script>
+</head>
+<body>
+    
+    <a href="javascript:jump()">줄넘기 회수 출력</a>    
+
+</body>
+</html>
+

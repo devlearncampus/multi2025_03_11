@@ -1,0 +1,63 @@
+<script>
+
+    //산술 연산자 중 %연산자는 나머지를 구하는 연산자임
+    //let a=14;
+    //console.log(a%5);
+    //console.log(6%7);
+
+    /* 대입 연산자  
+        우측의 데이터를 좌측의 변수에 대입
+    */
+   //let x=3;
+   //기존 x 에 4를 대입하는게 아니라, 4를 누적하고 싶다면?
+   //x= x+5;  // x+=5
+   //y%=3; // y = y%3
+
+    /*증감 연산자 1을 누적 하거나, 감소시키는 단축표현*/
+    let k=1;
+    k = k+1; // k+=1
+    k++; //k=k+1
+
+    let p=1;
+    p--;  //p=p-1 , p-=1
+
+    // 증감연산자의 연산기호가 뒤에 붙으면, 후순위..
+    let a=1;
+    console.log(++a);
+
+    //비교연산자 
+    //==, ===,  !=, !==, >, >=, <=
+    console.log(3==4); //false
+    console.log(3!=4);//true
+    console.log("5>2의 결과는 ", 5>2);//true
+
+    console.log("4>=4의 결과 ",  4>=4); //true
+
+    /*삼항 연산자 */
+    let result = (false)? 5 : 0;
+    console.log(result);
+
+    console.log( (3>5)? "a" : "b" );
+
+    //논리 연산자 
+    // &&   and 의 의미 (연산 대상 즉 피연산자가 모두 true 이어야  true 반환)
+    let t1=true;
+    let t2=false;
+    let t3=true; 
+    console.log( t1 && t2);
+
+    //  ||  or  의 의미 (피연산자중 하나라도 true가 있으면 true를 반환)
+    console.log( t1 || t2);
+
+    //  !  not 의 의미 
+    console.log( !(!true));
+</script>
+
+
+
+
+
+
+
+
+
