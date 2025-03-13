@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0;}
+        #wrapper{
+            width: 1000px;
+            margin: auto;
+        }
+        #header{
+            height: 50px;
+            background-color: aquamarine;
+        }
+        #side_up{
+            width: 500px;
+            height: 300px;
+            background-color: chocolate;
+            float:left;
+        }
+        #side_bottom{
+            width: 500px;
+            height: 300px;
+            background-color:khaki;
+            float:left;
+        }
+        #side_right{
+            width: 500px;
+            height: 600px;
+            background-color: brown;
+            float:right; /*left를 주게 되면, side_right가 왼쪽을 차지하고 있는 줄 인식하게 됨*/
+        }
+        #footer{
+            height: 50px;
+            background-color: chartreuse;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">헤더영역</div>
+        <div id="side_up">사이드 위</div>
+        <div id="side_right">사이드 우측</div>   <!-- up의 좌측을 차지하고, 빈 공간을 차지할 요소는 side_right 가 되어야 하므로 --->
+        <div id="side_bottom">사이드 아래</div>
+        <div id="footer">푸터</div>
+    </div>
+</body>
+</html>

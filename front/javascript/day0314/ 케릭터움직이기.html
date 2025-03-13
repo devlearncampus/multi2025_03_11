@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 1200px;
+            height: 800px;
+            border:2px solid red;
+            margin: auto;
+            position: relative; /*자식 요소에 absolute가 지정되었으면, 부모인 wrapper에 반드시
+            position 이 명시되어 있어야 한다..만일 명시하지 않으면, 자식의 기준점은 wrapper 가 아닌
+            문서를 좌표를 기준으로 함*/
+        }
+
+        /*wrapper라는 div를 부모로 하는 절대위치로 지정*/
+        #pic{
+            width: 100px;
+            position: absolute; /*부모 요소를 기준으로 한 위치 지정 법*/
+            top:0px;
+            left:0px; /*단어가 left라고 해서 왼쪽으로 움직이는 거 아님
+                                x축  우측:증가, 죄측:감소*/
+        }
+    </style>
+    <script>
+        let x=0; //left값을 누적시킬 전역변수 , 전역변수는 프로그램인 브라우저가 종료될때까지 생명력 유지
+        let y=0; //top의 값을 누적시킬 전역변수
+
+        function move(){
+            //방향키 4개에 따른 이동처리 
+            if(event.keyCode==37){
+                console.log("Left");
+                //전역변수값을 -10 누적시킴 
+                x = x-10;
+                document.getElementById("pic").style.left=x+"px";
+            }else if(event.keyCode==38){
+                console.log("Up");
+                y = y -10;
+                //문서내의 pic 아이디를 갖는 요소의 포지션 스타일 중 top값을 10씩 감소시키자 
+                document.querySelector("img").style.top=y+"px";
+
+            }else if(event.keyCode==39){
+                console.log("Right");
+                //문서내의 pic이라는 이미지의 스타일 중 left을 증가
+                x = x+10;//전역변수에 10 누적 
+                document.getElementById("pic").style.left=x+"px";
+
+            }else if(event.keyCode==40){
+                console.log("Down");
+                //문서내의 pic 아이디를 갖는 요소의 포지션 스타일 중 top값을 10씩 증가시키자 
+                y = y +10;//증감식
+                document.querySelector("img").style.top=y+"px";
+            }
+        }    
+    </script>
+</head>
+<body onKeyDown="move()">
+    
+    <div id="wrapper">
+        <img src="../images/tenor.gif" id="pic">
+    </div>
+
+</body>
+</html>

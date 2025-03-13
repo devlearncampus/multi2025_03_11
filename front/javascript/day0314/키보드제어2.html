@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /*
+    조건문
+    1) 단일 조건인 경우 : if문 
+
+    2) 양자 택일 조건, 흑백논리 조건, 조건 판단 대상이 단 2가지로만 분류될때 : if~else
+
+    3) 조건 판단 대상이 여러개 일때는 if문을 여러번 써도 되지만 ,효율성이 떨어짐 : else~if 
+
+    4)   else~if문과 목적이 같지만, 좀더 코드를 단순화 시킬 수 있는 조건문인 switch case문 
+        단) switch case 문은 조건 판단의 대상이 반드시 상수여야 한다...따라서 else~if문보다 처리할 수있는 
+        업무 범위가 제한적..
+    */
+    function keyboard(){
+        //console.log("you pushed!!", event.keyCode);
+
+        //else~if를 써도 되지만, 코드를 줄여쓰거나 단축시킬때는 
+        //switch~case 문이 압도적이다..(상수만을 조건대상으로 함)
+        switch(event.keyCode){
+            //break 문을 적지 않으면 else 문이 없는 것과 같다..
+            //따라서 이하의 break 없는 문장이 모두 수행
+            case 37:console.log("Left Move");break;
+            case 38:console.log("Up Move");break;
+            case 39:console.log("Right Move");break;
+            case 40:console.log("Down Move");break;
+
+            //case문에 해당되지 않는 이외의 모든 경우~~~
+            default:alert("키보드 똑바로 쳐");
+        }
+
+
+    }
+    </script>
+</head>
+<body onKeyDown="keyboard()">
+    
+</body>
+</html>
+
+
+
+
+

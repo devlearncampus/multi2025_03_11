@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* font-size:60px; */
+        }
+        img{
+            /* width:45px; */
+            /*이미지의 양쪽 공간에 인라인 요소들을 채우고  싶다면
+            이미지를 왼쪽, 또는 오른쪽으로  float 할수 있다
+            대상을 float 시키면, 나머지 공간으로 인라인요소들이
+            쏟아져 흘러들어가게 됨
+            float은 사실 html 의 정상적인 normal postion 약속을 어기고
+            정상 위치를 벗어하는 현상.. 
+            */
+            float:left;
+        }
+        #box{
+            width:300px;
+            height: 200px;
+            background: red;
+            /*block요소인 현재 div가 float된 요소인 img를 인식하지
+            못하기 때문에, 인식시키는 속성을 부여해야 함*/
+            clear:both; /*left, right건 인식함*/
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/fox.png" alt="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste tenetur exercitationem laboriosam ducimus, ad omnis magnam consequatur repudiandae nisi numquam dolore sunt voluptate ex, dolores quae, quas error fugit eius?
+    A obcaecati doloremque impedit inventore nobis consequuntur, explicabo aperiam doloribus dicta consequatur. Facilis iure sequi nam vel. Earum odit placeat voluptas ut voluptatibus dolor pariatur! Praesentium maiores delectus explicabo quaerat.
+
+    <div id="box"></div>
+
+</body>
+</html>

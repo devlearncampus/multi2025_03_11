@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            width: 1000px;
+            margin: auto;
+            background-color: gainsboro;
+        }
+        #header{
+            height: 50px;
+            background-color:aqua ;
+        }
+        #side_up{
+            width: 500px;
+            height: 300px;
+            background-color: bisque;
+            /*우측에 다른 요소와 공존하기 위해  float*/
+            float:left;
+        }
+        #side_right{
+            width: 500px;
+            height: 600px;
+            background-color: chartreuse;
+            float:right;
+        }
+        #side_down{
+            width: 500px;
+            height: 300px;
+            background-color: darkorange;
+            float:left;
+        }
+        #footer{
+            height: 50px;
+            background: fuchsia;
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div id="header">헤더</div>
+        <div id="side_up">사이드 업</div>
+        <div id="side_right">사이드 우측</div>
+        <div id="side_down">사이드 아래</div>
+        <div id="footer">푸터</div>
+    </div>
+
+</body>
+</html>

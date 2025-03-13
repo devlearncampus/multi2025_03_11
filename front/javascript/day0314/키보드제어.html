@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*사용자가 키보드를 누르는 조건은 총 4가지 이므로, 조건문 중 
+        다중 조건을 판단하는 else~if를 사용하면 효율적이다..
+        참고) 그냥 if문 써도 프로그램은 정상 실행함 단지(효율성 저하) */
+        /*
+        if(){
+            console.log("UP");
+        }else if(){
+            console.log("Right");
+        }else if(){
+            console.log("Down");
+        }else if(){
+            console.log("Left");
+        }
+        */
+        
+        function keyboard(){
+            //alert("나 눌렀어? ");//경고 팝업창
+            //자바스크립트는 내부적으로 이벤트가 발생하면 event
+            //객체가 그 정보를 가지고 있다..(자체 지원)
+            //console.log(event.keyCode);
+
+            if(event.keyCode == 37){
+                console.log("좌측으로 갈래?");
+            }else if(event.keyCode == 38){
+                console.log("위쪽으로 갈래?");
+            }else if(event.keyCode == 39){
+                console.log("우측으로 갈래?");
+            }else if(event.keyCode == 40){
+                console.log("밑으로 갈래?");
+            }
+
+        }
+    </script>
+</head>
+<!-- 사용자가 키보드를 눌렀을때 발생하는 이벤트를 처리하는 핸들러 -->
+<body onKeyDown="keyboard()">
+    
+</body>
+</html>
