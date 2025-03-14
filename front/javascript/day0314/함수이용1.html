@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 자바스크립트 코드도 외부 파일로 저장해놓고 불러올 수 있다 -->
+    <!-- <script src="./multi.js"></script> -->
+    <script>
+        function getMulti(a, b){
+            let x=a;
+            let y=b;
+            let z = x*y;
+            return z;
+        }        
+        //우리가 이미 정의해놓았던 곱셈 처리 함수를 이용해보자!!
+        console.log(getMulti( 3, 5 )); 
+        console.log(getMulti( 2, 7 )); 
+        console.log(getMulti( 8, 2 )); 
+        console.log(getMulti( 2, 3 )); 
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

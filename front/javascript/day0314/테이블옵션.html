@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         //층수를 유저가 결정하도록 하자 
+        let fl = prompt("생성하실 층수를 입력하세요 ");
+        let ho=prompt("생성하실 호수를 입력하세요");//호수로 유저가 결정하도록 하자 
+        let br=prompt("건축물 두께를 입력하세요");//건축물 두께도 유저가 결정하도록 하자 
+
+        document.write(`<table  border='${br}px'>`);
+        for(let a=fl;a>=1;a--){
+            document.write(`<tr>`);
+            for(let i=1;i<=ho;i++){
+                document.write(`<td>${a}0${i}호</td>`);
+            }
+            document.write(`</tr>`);
+        }
+        document.write(`</table>`);
+    </script>    
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+<script>
+
+    //문제5
+    /*
+    for( let i=1;i<=10; i++){
+        document.write("☆");
+    }
+    */
+    //문제6
+    /*
+    for(let i=2; i<=10;  i=i+2 ){ 
+	    console.log(i);
+    }
+    */
+
+    //문제7
+    /*
+    let  i=1;
+    for( ; i<=5; ){
+        console.log(i);
+        i++;
+    }
+    */
+
+   // HTML  태그 즉, 문서안에 지정된 문자열을 출력하라 
+   //document.write("민 <br> 진호");
+   //문제8
+   /*
+   for(let i=1;i<=96; i++){
+        document.write("★");
+       if(i%10 ==0){//횟수가 10번째마다일때...10으로 나누어 떨어지면.. %
+            document.write("<br>");
+       }
+   }
+   */
+
+  //9번 문제
+  /*
+  for(let i=1;i<=20;i++){
+        document.write("☆");    
+        if(i%4 ==0){ //4 번째 마다..
+            document.write("★<br>");
+        }    
+  }
+  */
+    //9번문제 다른 풀이법
+    /*
+    for(let i=1;i<=25;i++){
+        if(i%5 != 0){//아닐때
+            document.write("☆");
+        }else{
+            document.write("★<br>"); //5로 나누어질때
+        }
+    }
+    */
+    //9번 문제풀이 3번째
+    //if~else문은 삼항연산자 사용을 고려할 대상이됨..
+    /*
+   for(let i=1;i<=25;i++){
+        let star=(i%5==0)?   "★<br>" : "☆";
+        document.write(star);
+   }
+    */
+
+  //10번 문제 
+  /*
+  for(let i=1;i<=10;i++){
+        document.write(i+"회반복 <br>");
+  }
+  */
+
+  //11번 문제 
+  /*
+  for(let i=2;i<=10;i+=2){
+      document.write(i + " 회반복 <br>");    
+  }
+  for(let i=1;i<=5;i++){
+      document.write(i*2 + " 회반복 <br>");    
+  }
+  */
+
+  //12 문제
+  /*
+  for(let i=1;i<=10;i++){
+    if(i%2 !=0){ //홀수인 경우...
+        document.write(i +"<br>"); 
+    }else{//그렇지 않은 경우.. 
+        document.write("짝수<br>");  
+    }
+  }
+*/
+
+//13번 문제 
+/*
+for(let i=1;i<=10;i++){
+    if(i%3 !=0){//3의 배수가 아니라면.. 
+        document.write( ` ${i} 회반복 <br> `);
+    }else{
+        document.write( `★ <br> `);
+    }
+}
+*/
+ 
+//14번 문제 
+/*
+for(let i=1;i<=19;i++){
+    if(i%5 !=0){ //5의 배수가 아니라면...
+        document.write("☆");
+    }else{
+        document.write("★");
+    }
+}
+*/
+//14 번 풀이2 
+/*
+for(let i=1;i<20;i++){
+    document.write( (i%5 !=0)?  "☆":"★" ) ;
+}
+*/
+
+//15번 문제 
+/*
+for(let i=1;i<=4;i++){
+    document.write(`10${i+4} <br>`);
+}
+for(let i=105;i<=108;i++){
+    document.write(`${i} <br>`);
+}
+*/
+
+ //16 번 문제 
+ //반복문을 대할때는 처음에 회수 판단이 중요한것이다..나머지는 어차피 반복이란 
+ //규칙이 있으므로 ,그 규칙을 파악하면 된다 
+ /*
+ for(let i=1;i<=9;i++){
+    document.write("3* "+ i+ "=" + 3*i +  "<br>");    
+ }
+ */
+//17번 문제 
+//반환형이 있는 내장함수, 사용자가 입력한 데이터를 반환받아서, 변수 dan에 담기
+/*
+let dan = prompt("원하시는 구구단 입력"); 
+
+for(let i=1;i<=9;i++){
+     document.write(` ${dan} *${i}=${dan*i} <br>`);   
+}
+*/
+//18번 문제 
+/*
+for(let i=1;i<=9;i++){
+    document.write(`${3*i} =3*${i} <br>`);
+}
+*/
+//21번 문제 "☆":"★"
+/*
+for(let i=1;i<=10;i++){
+    if(i<=5){
+        document.write("☆"); //5번째 이하면
+    }else{
+        document.write("★"); //5번 보다 크면
+    }
+}
+//21 번 문제 2번째 풀이 ( 삼항연산자)
+for(let i=1;i<=10;i++){
+        let star = (i<=5)?   "☆":"★";  
+        document.write(star);
+}
+*/
+//32번 문제 
+for(let a=1;a<=5;a++){
+    for(let i=1;i<=4;i++){
+        document.write("☆");
+    }
+    document.write("★<br>");//층수를 구분
+}
+</script>
+
+<body>
+    
+</body>
