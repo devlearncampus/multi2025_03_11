@@ -1,3 +1,6 @@
+<!-- 
+<!DOCTYPE html> html5 를 의미하는 것이고, html5 란 스마트기기를 지원하는 html 버전을 의미  
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +13,8 @@
             height: 700px;
             background-color: yellow;
             margin: auto;
+            position: relative; /*자식 때문에....*/
+            overflow:hidden; /*이 영역을 넘어서는 컨텐츠는 가려버린다*/
         }
         body {font-family: Arial, Helvetica, sans-serif;}
         * {box-sizing: border-box;}
@@ -25,7 +30,7 @@
             resize: vertical;
         }
 
-        input[type=submit] {
+        input[type=button] {
             background-color: #04AA6D;
             color: white;
             padding: 12px 20px;
@@ -34,7 +39,7 @@
             cursor: pointer;
         }
 
-        input[type=submit]:hover {
+        input[type=button]:hover {
             background-color: #45a049;
         }
 
@@ -44,29 +49,55 @@
             padding: 20px;
         }
     </style>
+    <!-- 제이쿼리 링크 CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function(){ // 문서 load 가 완료되면...(DOM들을 쓸 수 있는 시점)
+            // .container 라는 클래스 x 축 방향으로 움직여보자 
+            $(".container").animate({left: '0px'});
+
+            //$(누구를).어떻게()
+            $("input[type='button']").click(function(){
+                
+                //id텍스트 박스에 아무것도 입력을 하지 않으면, 욕!!
+                if( $("#uid").val()==""){
+                    alert("ID를 입력해야 합니다");
+                    $("#uid").focus(); //커서 올리기 
+                }else if( $("#uname").val()==""){
+                    alert("이름을 입력해야 합니다");
+                    $("#uname").focus(); //커서 올리기 
+                }else if( $("#email").val()==""){
+                    alert("메일을 입력해야 합니다");
+                    $("#email").focus(); //커서 올리기 
+                }else{
+                    //위의 if문을 만나지 않은 경우는, 회원이 제대로 입력한 경우이므로, 서버로 폼을 전송해야 함 
+                    $("form").attr("action", "http://daum.net");//폼을 전송할 서버의 주소를 명시 
+                    $("form").submit(); //이 시점에 전송이 발생함    
+                }
+            });           
+        });        
+    </script>
 </head>
 <body>
-    
     <div id="wrapper">
-        <div class="container">
-            <form action="/action_page.php">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div class="container" style="position: absolute;left:-600px">
+            <!-- 폼태그는 단어 뜻 그대로, 폼양식의 범위를 설정하여, 전송 등에 사용하는 태그이며 
+             시각적으로 보이지는 않음, 단 범위를 설정한다 -->
+            <form action="http://daum.net">
+              <!-- label은 제목 역할을 수행, html5 는  -->
+              <label for="uid">Your ID</label>
+              <input type="text" id="uid" name="firstname" placeholder="Your ID..">
           
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          
-              <label for="country">Country</label>
-              <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-          
-              <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
-              <input type="submit" value="Submit">
+              <label for="uname">Your Name</label>
+              <input type="text" id="uname" name="lastname" placeholder="Your name..">
+
+              <label for="email">Your Email</label>
+              <input type="text" id="email" name="lastname" placeholder="Your email..">
+
+              <!-- type="submit" 으로 하면 폼 양식을 무조건 전송해버리므로, 우리는 지금 서버가 없으니
+               전송 서버 주소가 없다..따라서 일반 버튼으로 전환 -->
+              <input type="button" value="Submit">
             </form>
           </div>
     </div>
