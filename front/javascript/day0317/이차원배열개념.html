@@ -1,0 +1,52 @@
+<script>
+    
+
+    let arr = new Array(3);  //길이가 3인 일차원 배열 선언 
+
+    let fruit=["apple","banana","berry", "graph"];
+    let cars=["Benz", "BMW", "Audi", "K9"];
+    let food=["burger","juice","pizza","soda"];
+
+    //기존의 arr은 일차원 배열이었으나, 아래에서 일차원 배열들을
+    //각 요소에 넣는 바람에, 이차원 배열이 되었다
+    arr[0]=fruit;
+    arr[1]=cars;
+    arr[2]=food;
+
+    
+    //fruit은 더이상, 개성있는 이름을 사용할수 없고, 이차원배열을 통해서 접근
+    //for(let i=0;i< arr[0].length; i++){
+    //console.log(arr[0][0]);
+    //console.log(arr[0][1]);
+    //console.log(arr[0][2]);
+    //console.log(arr[0][3]);
+    //}
+
+    //0번째 층의 반복문
+    /*
+    for(let i=0; i< arr[0].length;i++){ 
+        console.log(arr[0][i]);
+    }
+    //1번째 층의 반복문
+    for(let i=0;i< arr[1].length;i++){
+        console.log(arr[1][i]);
+    }
+    //2번째 층의 반복문
+    for(let i=0;i< arr[2].length;i++){
+        console.log(arr[2][i]);
+    }
+    */
+
+    for(let a=0; a< arr.length ;a++){ //층수만큼 반복 
+        for(let i=0; i< arr[a].length;i++){ //해당 층의 호수만큼 반복
+            console.log(arr[a][i]);
+        }
+    }
+
+</script>
+
+
+
+
+
+
